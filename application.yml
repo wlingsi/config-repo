@@ -1,10 +1,44 @@
-server:
-  port: 8888
 spring:
-  cloud:
-    config:
-      server:
-        git:
-          uri: https://github.com/weekly-drafts/config-repo-spring-cloud-configserver-vault
-  application:
-    name: configserver
+  profiles.active: dev
+  application.name: netsbiz-integration
+---
+spring:
+  profiles: dev
+  datasource:
+    url: jdbc:mysql://localhost:3306/netsbizsv2
+    username: admin
+    password: p2ssw0rd
+    dbcp2:
+      test-on-borrow: true
+      validation-query: /* PING */select 1
+      max-total: 8
+      max-idle: 8
+      initial-size: 1
+hibernate:
+  dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+  show.sql: false
+  format.sql: true
+  new.generator.mappings: false
+sftp:
+  host:
+    ip:
+    port: 22
+    user:
+    password:
+    remote:
+      directory:
+        download:
+          filter:
+  local:
+    directory:
+      download:
+logging:
+  level:
+    root: INFO
+    org.springframework: ERROR
+    com.nets: TRACE
+    org.hibernate: ERROR
+  pattern:
+    file: %d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%thread] [id=%X{id}] %logger{36} - %msg [%L]%n
+  file:
+    path: logs/netsbiz-integration.log
