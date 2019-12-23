@@ -1,8 +1,6 @@
 spring:
   profiles.active: dev
   application.name: netsbiz-integration
----
-  profiles: dev
   datasource:
     url: jdbc:mysql://localhost:3306/netsbizsv2
     username: admin
