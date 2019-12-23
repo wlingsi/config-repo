@@ -39,6 +39,6 @@ logging:
     com.nets: TRACE
     org.hibernate: ERROR
   pattern:
-    file: %d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%thread] [id=%X{id}] %logger{36} - %msg [%L]%n
+    file: "%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%thread] [id=%X{id}] %logger{36} - %msg [%L]%n"
   file:
     path: logs/netsbiz-integration.log
