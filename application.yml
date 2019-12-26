@@ -1,8 +1,6 @@
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/netsbizsv2
-    username: admin
-    password: p2ssw0rd
     dbcp2:
       test-on-borrow: true
       validation-query: /* PING */select 1
@@ -16,17 +14,15 @@ hibernate:
   new.generator.mappings: false
 sftp:
   host:
-    ip:
+    ip: 192.168.1.80
     port: 22
-    user:
-    password:
     remote:
       directory:
         download:
-          filter:
+          filter: mss_sync_netsbiz_whitelist_*
   local:
     directory:
-      download:
+      download: in
 logging:
   level:
     root: INFO
