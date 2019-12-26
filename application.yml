@@ -19,7 +19,7 @@ sftp:
     remote:
       directory:
         download: whitelist
-          filter: mss_sync_netsbiz_whitelist_*
+        download.filter: mss_sync_netsbiz_whitelist_*
   local:
     directory:
       download: in
