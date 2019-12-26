@@ -14,7 +14,7 @@ hibernate:
   new.generator.mappings: false
 sftp:
   host:
-    ip: 192.168.1.80
+    ip: 192.168.0.156
     port: 22
     remote:
       directory:
