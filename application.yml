@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/netsbizsv2
+    jdbcUrl: jdbc:mysql://localhost:3306/netsbizsv2
     dbcp2:
       test-on-borrow: true
       validation-query: /* PING */select 1
