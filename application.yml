@@ -19,7 +19,7 @@ sftp:
     remote:
       directory:
         download: whitelist
-        download.filter: mss_sync_netsbiz_whitelist_*
+        download.filter: ^mss_sync_netsbiz_whitelist_\d{8}?.[tT][xX][tT]$
   local:
     directory:
       download: in
