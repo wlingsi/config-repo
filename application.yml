@@ -18,7 +18,7 @@ sftp:
     port: 22
     remote:
       directory:
-        download:
+        download: whitelist
           filter: mss_sync_netsbiz_whitelist_*
   local:
     directory:
