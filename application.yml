@@ -12,17 +12,6 @@ hibernate:
   show.sql: false
   format.sql: true
   new.generator.mappings: false
-sftp:
-  host:
-    ip: 192.168.1.80
-    port: 22
-    remote:
-      directory:
-        download: whitelist
-        download.filter: ^mss_sync_netsbiz_whitelist_\d{8}?.[tT][xX][tT]$
-  local:
-    directory:
-      download: in
 logging:
   level:
     root: INFO
