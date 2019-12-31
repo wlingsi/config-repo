@@ -1,4 +1,4 @@
 jobschedule.cron: 0 * * * * *
 in.dir: in
-filter.regex: ^mss_sync_netsbiz_whitelist_\d{8}?.[tT][xX][tT]$
+filter.regex: "^mss_sync_netsbiz_whitelist_\d{8}?.[tT][xX][tT]$"
 job.name: fileProcessingJob
