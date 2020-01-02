@@ -1,5 +1,6 @@
 spring:
   datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
     jdbcUrl: jdbc:mysql://localhost:3306/netsbizsv2
     dbcp2:
       test-on-borrow: true
