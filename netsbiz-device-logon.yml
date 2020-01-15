@@ -1,9 +1,9 @@
 jdbc:
   polling:
     adapter:
-      query.select: "SELECT * FROM user where status = 0"
+      query.select: "SELECT * FROM user where npsstatus = 0"
       max.rows: 5000
-      query.update: "UPDATE user set status = 1 where uid in (:uid)"
+      query.update: "UPDATE user set npsstatus = 1 where uid in (:uid)"
 nps:
   notify:
     url: "https://nets.hopto.org/netsbizsv2/notify"
