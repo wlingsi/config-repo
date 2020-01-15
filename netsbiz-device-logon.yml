@@ -1,0 +1,12 @@
+jdbc:
+  polling:
+    adapter:
+      query.select: "SELECT * FROM user where status = 0"
+      max.rows: 5000
+      query.update: "UPDATE user set status = 1 where uid in (:uid)"
+nps:
+  notify:
+    url: "https://nets.hopto.org/netsbizsv2/notify"
+    api.gw.secret: 2c73c715-fbb3-4ec8-895a-203f3ae1dee6
+    api.gw.key.id: 013b016e-0768-4c97-a0fa-86d13d33d9a4
+    url.uat.nps.merchant.service: "https://uat-api.nets.com.sg/uat/merchantservices/v1/device/logon"
