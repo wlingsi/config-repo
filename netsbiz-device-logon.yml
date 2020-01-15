@@ -2,7 +2,7 @@ jdbc:
   polling:
     adapter:
       query.select: "SELECT * FROM user where npsstatus = 0"
-      max.rows: 5000
+      max.rows: 1
       query.update: "UPDATE user set npsstatus = 1 where uid in (:uid)"
 nps:
   notify:
