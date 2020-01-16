@@ -1,9 +1,9 @@
 jdbc:
   polling:
     adapter:
-      query.select: "SELECT * FROM user where npsstatus = 0"
+      query.select: "select t.* from user u inner join mapusertid ut on u.uid = ut.uid inner join terminal t on ut.tid = t.tid where t.npsstatus in ('','UNREGISTERED');"
       max.rows: 1
-      query.update: "UPDATE user set npsstatus = 1 where uid in (:uid)"
+      query.update: "UPDATE terminal set npsstatus = 'REGISTERED' where tid in (:tid)"
 nps:
   notify:
     url: "https://nets.hopto.org/netsbizsv2/notify"
